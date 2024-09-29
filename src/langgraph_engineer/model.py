@@ -4,9 +4,9 @@ def _get_model(config, default, key):
     model = config['configurable'].get(key, default)
     
     if model == "openai-oi-mini":
-        return ChatOpenAI(temperature=0, model_name="oi-mini")
+        return ChatOpenAI(temperature=0, model_name="o1-mini")
     elif model == "openai-oi-preview":
-        return ChatOpenAI(temperature=0, model_name="oi-preview")
+        return ChatOpenAI(temperature=0, model_name="o1-preview")
     elif model == "openai-gpt4o":
         return ChatOpenAI(temperature=0, model_name="gpt-4o")
     else:
