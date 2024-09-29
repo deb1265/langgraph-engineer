@@ -11,6 +11,6 @@ class OutputState(TypedDict):
 
 
 class GraphConfig(TypedDict):
-    gather_model: Literal['oi-mini', 'oi-preview','gpt-4o']
-    draft_model: Literal['oi-mini', 'oi-preview','gpt-4o']
-    critique_model: Literal['oi-mini', 'oi-preview','gpt-4o']
+    gather_model: Literal['o1-mini', 'o1-preview','gpt-4o']
+    draft_model: Literal['o1-mini', 'o1-preview','gpt-4o']
+    critique_model: Literal['o1-mini', 'o1-preview','gpt-4o']
