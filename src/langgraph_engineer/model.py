@@ -1,12 +1,14 @@
 from langchain_openai import ChatOpenAI
-from langchain_anthropic import ChatAnthropic
-
 
 def _get_model(config, default, key):
     model = config['configurable'].get(key, default)
-    if model == "openai":
-        return ChatOpenAI(temperature=0, model_name="o1-mini")
-    elif model == "anthropic":
-        return ChatAnthropic(temperature=0, model_name="claude-3-5-sonnet-20240620")
+    
+    if model == "openai-oi-mini":
+        return ChatOpenAI(temperature=0, model_name="oi-mini")
+    elif model == "openai-oi-preview":
+        return ChatOpenAI(temperature=0, model_name="oi-preview")
+    elif model == "openai-gpt4o":
+        return ChatOpenAI(temperature=0, model_name="gpt-4o")
     else:
-        raise ValueError
+        raise ValueError("Invalid model specified. Supported models: openai-oi-mini, openai-oi-preview, openai-gpt4o.")
+
